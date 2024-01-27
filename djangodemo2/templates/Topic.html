@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babolbabol</title>
+    <link rel="stylesheet" href="/static/css/Topic2.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <!-- 跳转至论坛主界面 -->
+    <div class="top">
+        <a href="main.html"><img src="/static/images/title.png" alt="Babolbabol" class="logo"></a>
+    </div>
+    <!-- 标题、收藏、分享 -->
+    <div class="head">
+         <div class="title"><p>{{ inf.Topic.TTopic }}</p></div>
+<!--        <div class="title"><p>《缄默法则》模组发布</p></div>-->
+        <div class="store" id="store"></div>
+        <div class="share store"></div>
+    </div>
+    <!-- 用户和帖内容 -->
+    <div class="bod">
+        <div class="personal_details">
+            <div class="avatar_id">
+                <img src="/static/images/0.jpg" alt="用户头像">
+                <div class="umsg">
+                    <div class="icons">{{ inf.Topic.username }}</div>
+                    <div class="icons" id="ID">ID {{ inf.Topic.UID_id }}</div>
+                </div>
+            </div>
+        </div>
+<!-- 设置字体宽度随内容改变div{ width:auto; display:inline-block !important; display:inline; } -->
+        <div class="topic"> 
+            <div class="topic_top" id="topic">
+                <div class="number"><p>#1</p></div>
+                <div class="date">{{ inf.Topic.TTime|date:'M d, Y' }}</div>
+            </div>
+            <div class="context">{{ inf.Topic.TContent }}</div>
+        </div>
+    </div>
+    <!-- 回复帖 -->
+    {% for re in inf.replys %}
+    {% if forloop.counter|divisibleby:2 %}
+    <div class="bod">
+        <div class="personal_details">
+            <div class="avatar_id_r" id="black">
+                <img src="/static/images/0.jpg" alt="用户头像">
+                <div class="umsg">
+                    <div class="icons">{{ re.username }}</div>
+                    <div class="icons" id="ID2">ID {{ re.UID_id }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="topic_repley" id="black">
+            <div class="topic_top_r">
+                <div class="numbers"><p>#{{ forloop.counter|add:'1' }}</p></div>
+                <div class="date">{{ re.RTime|date:'M d, Y' }}</div>
+            </div>
+            <div class="context">{{ re.RContent }}</div>
+        </div>
+    </div>
+    {% else %}
+    <div class="bod">
+        <div class="personal_details">
+            <div class="avatar_id_r">
+                <img src="/static/images/0.jpg" alt="用户头像">
+                <div class="umsg">
+                    <div class="icons">{{ re.username }}</div>
+                    <div class="icons" id="ID2">ID {{ re.UID_id }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="topic_repley">
+            <div class="topic_top_r">
+                <div class="numbers"><p>#{{ forloop.counter|add:'1' }}</p></div>
+                <div class="date">{{ re.RTime|date:'M d, Y' }}</div>
+            </div>
+            <div class="context">{{ re.RContent }}</div>
+        </div>
+    </div>
+    {% endif %}
+    {% empty %}
+    {% endfor %}
+    <!-- 页码 -->
+    <div class="page">
+       <div class="se" id="first">首页</div>
+       <div class="bn" id="before">上一页</div>
+       <div class="page_number">1</div>
+       <div class="bn" id="after">下一页</div>
+       <div class="se" id="end">尾页</div>
+       <div id="count">共1回复，1页</div>
+    </div>
+    <!-- 对帖进行回复 -->
+    <div>
+        <form action="{% url 'postre' %}" method="POST" onsubmit="return check()">{% csrf_token %}
+            <div class="reply">
+                <input type="text" class="inputs" name="rcontent">
+                <input type="hidden" value="{{ inf.uid }}" name="ruid">
+                <input type="hidden" value="{{ inf.Topic.TID }}" name="TID">
+            </div>
+            <input type="submit", name="Rcontent", placeholder="回帖内容", required="" value="" class="send">
+    </form>
+    </div>
+</body>
+<script src="/static/js/prTopic.js"></script>
+</html>

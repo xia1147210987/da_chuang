@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babolbabol</title>
+    <link rel="stylesheet" href="/static/css/prpustopic.css">
+</head>
+<body>
+    <div>
+        <img src="/static/images/title.png" alt="Babolbabol" class="logo" id="logo">
+    </div>
+    <div>
+        <form action="{% url 'prpostopic' %}" id="pustopic" method="POST" onsubmit="return check()">{% csrf_token %}
+            <div id="recframe">
+                <div class="title">标题</div>
+                <input type="text" placeholder="帖标题" class="input" id="user" name="TTopic" required=""/>
+            </div>
+            <div id="msgframe">
+                <div class="back msg"></div>
+                <img src="/static/images/MESSAGE.png" alt="msg" class="border msg">
+                <textarea name="TContent" id="msg" cols="30" rows="10" placeholder="帖内容" form="pustopic" required=""></textarea>
+                <input type="hidden" name="UID" id="uid" value="" required=""/>
+            </div>
+            <input type="text" class="rid" name="rid" placeholder="收帖人id(可空)"/>
+            <button onclick="formS()" class="btn" id="sub"/>
+        </form>
+    </div>
+</body>
+<script>
+    var idArray = window.location.search.split('=');
+    var assetId = idArray[1];
+    function formS(){
+        document.getElementById("uid").value = assetId;
+        document.getElementById("pustopic").submit();
+    }
+</script>
+</html>
