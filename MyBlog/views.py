@@ -7,7 +7,7 @@ import os
 import json
 from django.shortcuts import HttpResponse, render, redirect
 from django.views.decorators.csrf import csrf_exempt
-
+from django.shortcuts import render
 from django.urls import reverse
 from MyBlog.form import RegisterForm, LoginForm, Postopic, prPostopic
 from MyBlog.models import UserProfile, topic, reply, prtopic

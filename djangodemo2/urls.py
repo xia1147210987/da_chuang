@@ -24,7 +24,7 @@ from MyBlog.views import user_register, user_login, user_logout, user_postopic
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
-
+    path('', views.index),
     path('home/', views.topic, name='home'),
     path('register', user_register, name='register'),
     path('login', user_login, name='login'),
