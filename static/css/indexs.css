@@ -31,6 +31,15 @@ body {
 	margin: 0;
 }
 
+.link {
+	color: #c9bca0;
+	font-size: 0.9rem;
+	margin: 1.5rem 0;
+	text-decoration: none;
+	position: relative;
+	left: 190px;
+}
+
 .line{
 	position: absolute;
 	top:30%;
