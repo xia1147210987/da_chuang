@@ -133,19 +133,23 @@ body {
 
 .overlay--left {
 	transform: translateX(-20%);
+	background-image: url('/static/images/loginb1.jpg');
 }
 
 .container.right-panel-active .overlay--left {
 	transform: translateX(0);
+	background-image: url('/static/images/loginb1.jpg');
 }
 
 .overlay--right {
 	right: 0;
 	transform: translateX(0);
+	background-image: url('/static/images/loginb2.jpg');
 }
 
 .container.right-panel-active .overlay--right {
 	transform: translateX(20%);
+	background-image: url('/static/images/loginb2.jpg');
 }
 
 .form > .btn {
