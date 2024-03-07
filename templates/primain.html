@@ -75,12 +75,12 @@
                 </div>
             </div>
             <!--工具栏 -->
-             <div class="tool">
+            <div class="tool">
                 <a href="prsend/?id={{ infornation.user.UID }}"><img src="/static/images/text.png" alt="发布"></a>
                 <a href=""><img src="/static/images/msg.png" alt="私信"></a>
                 <a href=""><img src="/static/images/file.png" alt="回复"></a>
-             </div>
-             <!--搜索框 -->
+            </div>
+            <!--搜索框 -->
             <div class="search">
                 <div class="circle">
                     <img src="/static/images/searc.png" alt="搜索">
@@ -88,20 +88,20 @@
             </div>
         </div>
     </div>
-<form action="{% url 'gmain' %}" id="gmain" method="POST" onsubmit="return check()">{% csrf_token %}>
-    <input type="hidden" name="uname" value="{{ infornation.user.uname }}" id="name">
-</form>
+    <form action="{% url 'gmain' %}" id="gmain" method="POST" onsubmit="return check()">{% csrf_token %}>
+        <input type="hidden" name="uname" value="{{ infornation.user.uname }}" id="name">
+    </form>
 
-<form action="{% url 'prgetopic' %}" id="getopic" method="POST" onsubmit="return check()">{% csrf_token %}
-    <input type="hidden" value="{{ top.TID }}" name="TID" required="" class="hidd" id="TID"/>
-    <input type="hidden" value="{{ infornation.user.UID }}" name="UID" required=""/>
-</form>
+    <form action="{% url 'prgetopic' %}" id="getopic" method="POST" onsubmit="return check()">{% csrf_token %}
+        <input type="hidden" value="{{ top.TID }}" name="TID" required="" class="hidd" id="TID" />
+        <input type="hidden" value="{{ infornation.user.UID }}" name="UID" required="" />
+    </form>
 </body>
 <!--<script src="/static/js/prmain.js"></script>-->
 <script type="text/javascript">
     const logo = document.getElementById('logo');
-    fun = function(e){
-        var tar = e.target|| e.srcElement;
+    fun = function (e) {
+        var tar = e.target || e.srcElement;
         var id = tar.id;
         document.getElementById("TID").value = id;
         document.getElementById("getopic").submit();
@@ -110,4 +110,5 @@
         document.getElementById("gmain").submit();
     });
 </script>
+
 </html>

@@ -17,8 +17,10 @@
     </div>
     <!-- 标题、收藏、分享 -->
     <div class="head">
-         <div class="title"><p>{{ inf.Topic.TTopic }}</p></div>
-<!--        <div class="title"><p>《缄默法则》模组发布</p></div>-->
+        <div class="title">
+            <p>{{ inf.Topic.TTopic }}</p>
+        </div>
+        <!--        <div class="title"><p>《缄默法则》模组发布</p></div>-->
         <div class="store" id="store"></div>
         <div class="share store"></div>
     </div>
@@ -33,10 +35,12 @@
                 </div>
             </div>
         </div>
-<!-- 设置字体宽度随内容改变div{ width:auto; display:inline-block !important; display:inline; } -->
-        <div class="topic"> 
+        <!-- 设置字体宽度随内容改变div{ width:auto; display:inline-block !important; display:inline; } -->
+        <div class="topic">
             <div class="topic_top" id="topic">
-                <div class="number"><p>#1</p></div>
+                <div class="number">
+                    <p>#1</p>
+                </div>
                 <div class="date">{{ inf.Topic.TTime|date:'M d, Y' }}</div>
             </div>
             <div class="context">{{ inf.Topic.TContent }}</div>
@@ -57,7 +61,9 @@
         </div>
         <div class="topic_repley" id="black">
             <div class="topic_top_r">
-                <div class="numbers"><p>#{{ forloop.counter|add:'1' }}</p></div>
+                <div class="numbers">
+                    <p>#{{ forloop.counter|add:'1' }}</p>
+                </div>
                 <div class="date">{{ re.RTime|date:'M d, Y' }}</div>
             </div>
             <div class="context">{{ re.RContent }}</div>
@@ -76,7 +82,9 @@
         </div>
         <div class="topic_repley">
             <div class="topic_top_r">
-                <div class="numbers"><p>#{{ forloop.counter|add:'1' }}</p></div>
+                <div class="numbers">
+                    <p>#{{ forloop.counter|add:'1' }}</p>
+                </div>
                 <div class="date">{{ re.RTime|date:'M d, Y' }}</div>
             </div>
             <div class="context">{{ re.RContent }}</div>
@@ -87,12 +95,12 @@
     {% endfor %}
     <!-- 页码 -->
     <div class="page">
-       <div class="se" id="first">首页</div>
-       <div class="bn" id="before">上一页</div>
-       <div class="page_number">1</div>
-       <div class="bn" id="after">下一页</div>
-       <div class="se" id="end">尾页</div>
-       <div id="count">共1回复，1页</div>
+        <div class="se" id="first">首页</div>
+        <div class="bn" id="before">上一页</div>
+        <div class="page_number">1</div>
+        <div class="bn" id="after">下一页</div>
+        <div class="se" id="end">尾页</div>
+        <div id="count">共1回复，1页</div>
     </div>
     <!-- 对帖进行回复 -->
     <div>
@@ -102,9 +110,10 @@
                 <input type="hidden" value="{{ inf.uid }}" name="ruid">
                 <input type="hidden" value="{{ inf.Topic.TID }}" name="TID">
             </div>
-            <input type="submit", name="Rcontent", placeholder="回帖内容", required="" value="" class="send">
-    </form>
+            <input type="submit" , name="Rcontent" , placeholder="回帖内容" , required="" value="" class="send">
+        </form>
     </div>
 </body>
 <script src="/static/js/prTopic.js"></script>
+
 </html>

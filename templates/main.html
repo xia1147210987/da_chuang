@@ -43,12 +43,13 @@
             {% endif %}
             {% empty %}
             <div class="contents--black">
-                <div class="ctip">突发情况下的应急处理方法汇总</div>
-                <div id="cposter">响尾蛇</div>
-                <div id="ctime">2013.02.18</div>
+                <div class="ctip">常规测验展示情况集</div>
+                <div id="cposter">Tester One</div>
+                <div id="ctime">2024.02.18</div>
             </div>
             {% endfor %}
         </div>
+        
         <!-- 用户信息 -->
         <div class="personal_details">
             <div class="avatar_id">
@@ -59,12 +60,12 @@
                 </div>
             </div>
             <!--工具栏 -->
-             <div class="tool">
+            <div class="tool">
                 <a href="send/?id={{ infornation.user.UID }}"><img src="/static/images/text.png" alt="发布"></a>
                 <a href=""><img src="/static/images/msg.png" alt="私信"></a>
                 <a href=""><img src="/static/images/file.png" alt="回复"></a>
-             </div>
-             <!--搜索框 -->
+            </div>
+            <!--搜索框 -->
             <div class="search">
                 <div class="circle">
                     <img src="/static/images/searc.png" alt="搜索">
@@ -72,19 +73,19 @@
             </div>
         </div>
     </div>
-<form action="{% url 'gprmain' %}" id="gmain" method="POST" onsubmit="return check()">{% csrf_token %}>
-    <input type="hidden" name="uname" value="{{ infornation.user.uname }}" id="name">
-</form>
-<form action="{% url 'getopic' %}" id="getopic" method="POST" onsubmit="return check()">{% csrf_token %}
-    <input type="hidden" value="{{ top.TID }}" name="TID" required="" id="TID"/>
-    <input type="hidden" value="{{ infornation.user.UID }}" name="UID" required=""/>
-</form>
+    <form action="{% url 'gprmain' %}" id="gmain" method="POST" onsubmit="return check()">{% csrf_token %}>
+        <input type="hidden" name="uname" value="{{ infornation.user.uname }}" id="name">
+    </form>
+    <form action="{% url 'getopic' %}" id="getopic" method="POST" onsubmit="return check()">{% csrf_token %}
+        <input type="hidden" value="{{ top.TID }}" name="TID" required="" id="TID" />
+        <input type="hidden" value="{{ infornation.user.UID }}" name="UID" required="" />
+    </form>
 </body>
 <!--<script src="/static/js/mains.js"></script>-->
 <script>
     const logo = document.getElementById('logo');
-    fun = function(e){
-        var tar = e.target|| e.srcElement;
+    fun = function (e) {
+        var tar = e.target || e.srcElement;
         var id = tar.id;
         console.log(1)
         document.getElementById("TID").value = id;
@@ -94,4 +95,5 @@
         document.getElementById("gmain").submit();
     });
 </script>
+
 </html>
