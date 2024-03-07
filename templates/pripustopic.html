@@ -14,8 +14,8 @@
     <div>
         <form action="{% url 'prpostopic' %}" id="pustopic" method="POST" onsubmit="return check()">{% csrf_token %}
             <div id="recframe">
-                <div class="title">标题</div>
-                <input type="text" placeholder="帖标题" class="input" id="user" name="TTopic" required=""/>
+                <div class="title">Title</div>
+                <input type="text" placeholder="请输入帖文标题" class="input" id="user" name="TTopic" required=""/>
             </div>
             <div id="msgframe">
                 <div class="back msg"></div>
@@ -24,7 +24,7 @@
                 <input type="hidden" name="UID" id="uid" value="" required=""/>
             </div>
             <input type="text" class="rid" name="rid" placeholder="收帖人id(可空)"/>
-            <button onclick="formS()" class="btn" id="sub"/>
+            <button onclick="formS()" class="btn" id="sub">
         </form>
     </div>
 </body>

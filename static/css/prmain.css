@@ -1,6 +1,6 @@
 * {
 	/* COLORS */
-	--bold:#1387e0;
+	--bold: #1387e0;
 	--blue: #91BF88;
 	--lightblue: #1387e0;
 	/* RADII */
@@ -26,189 +26,196 @@ body {
 	place-items: center;
 }
 
-.top{
+.top {
 	position: relative;
 	margin: 0;
 	border: 0;
 	width: 100%;
 }
 
-.logo{
-    position: relative;
-  	top:0%;
-    left:3%;
-    height: 180px;
+.logo {
+	position: relative;
+	top: 0%;
+	left: 5%;
+	width: 80%;
+	height: 120px;
 	float: left;
 }
 
-.container{
+.container {
 	width: 100%;
 	height: 70%;
 	position: relative;
 	left: 100px;
 }
 
-.icon{
-    font-size:20px;
-    color: #c9bca0;
-	position:absolute;
+.icon {
+	font-size: 20px;
+	color: #c9bca0;
+	position: absolute;
 	margin: 0 auto;
-	top:60%;
+	top: 60%;
 	float: right;
 	font-weight: bold;
 }
 
-#enter{
-    right:50px;
+#enter {
+	right: 50px;
 }
 
-.note{
+.note {
 	height: 0;
 	width: 0;
 }
 
-.head{
-    background-color: #0b0906;
-    height: 50px;
-    width: 900px;
+.head {
+	background-color: #0b0906;
+	height: 50px;
+	width: 900px;
 	position: relative;
 	margin-top: -40px;
 	margin-bottom: 10px;
 }
 
-.head div{
-	font-size:22px;
-    color: #1387e0;
+.head div {
+	font-size: 22px;
+	color: #1387e0;
 	/* margin: 0 auto; 居中 */
-	position:relative;
+	position: relative;
 	float: left;
 	text-align: center;
 	height: 50px;
 	top: 20%;
 }
 
-#htime{
+#htime {
 	float: right;
 	width: 180px;
 }
-#hposter{
+
+#hposter {
 	width: 170px;
 }
-#htip{
+
+#htip {
 	width: 490px;
 }
 
 .contents--black {
 	position: relative;
 	height: 50px;
-    width: 900px;
+	width: 900px;
 	display: block;
 	background-color: #e8e7e6;
 }
 
-.contents--brown{
+.contents--brown {
 	display: inline-block;
 	position: relative;
 	height: 50px;
-    width: 900px;
+	width: 900px;
 	display: block;
 	background-color: #f5f5f5
 }
 
-.contents--black div{
+.contents--black div {
 	font-size: 19px;
 	color: #fff;
 	position: relative;
 	float: left;
 	height: 50px;
 }
-.contents--brown div{
+
+.contents--brown div {
 	font-size: 19px;
-	color:#fff;
+	color: #fff;
 	position: relative;
 	float: left;
 	height: 50px;
 }
 
-#ctime{
+#ctime {
 	float: right;
 	width: 145px;
 	top: 10px;
 }
-#cposter{
+
+#cposter {
 	width: 135px;
 	top: 10px;
 }
-.ctip{
+
+.ctip {
 	width: 540px;
-	text-align:left;
-	margin-left:10px;
+	text-align: left;
+	margin-left: 10px;
 	top: 10px;
 }
 
-.ctip1{
+.ctip1 {
 	width: 540px;
-	text-align:left;
-	margin-left:10px;
+	text-align: left;
+	margin-left: 10px;
 	top: 10px;
 }
 
-.personal_details{
-    height: 200px;
-    width: 300px;
+.personal_details {
+	height: 200px;
+	width: 300px;
 	position: absolute;
-    right:10%;
+	right: 10%;
 }
 
-.avatar_id{
+.avatar_id {
 	position: relative;
 	height: 200px;
-    width: 300px;
-    background-image: url('/static/images/X.png');
+	width: 300px;
+	background-image: url('/static/images/X.png');
 	background-repeat: no-repeat;
-    background-position: center;
+	background-position: center;
 	background-size: 250%;
 }
 
-.avatar_id img{
-	width:80px;
-	height:80px;
-    margin: 5px 5px 5px 0;
+.avatar_id img {
+	width: 80px;
+	height: 80px;
+	margin: 5px 5px 5px 0;
 	border-radius: 50px;
 	margin-top: 50px;
 	margin-left: 30px;
 	float: left;
 }
 
-.umsg{
+.umsg {
 	position: relative;
 	height: 160px;
-    width: 250px;
+	width: 250px;
 	margin-left: 50px;
-	top:10px;
+	top: 10px;
 }
 
-.icons{
-    font-size:25px;
-    color: #c9bca0;
-	position:relative;
-	top:30%;
+.icons {
+	font-size: 25px;
+	color: #c9bca0;
+	position: relative;
+	top: 30%;
 	left: 10%;
 }
-#ID{
-    font-size:19px;
+
+#ID {
+	font-size: 19px;
 }
 
-.tool{
-    background-color: #0b0906;
-    height: 70px;
-    width: 290px;
+.tool {
+	background-color: #0b0906;
+	height: 70px;
+	width: 290px;
 	position: relative;
 	margin-bottom: 20px;
 	left: 9px;
 }
 
-.tool img{
+.tool img {
 	position: relative;
 	width: 40px;
 	height: 40px;
@@ -216,14 +223,15 @@ body {
 	margin-left: 40px;
 }
 
-.search{
+.search {
 	background-color: #0b0906;
-    height: 50px;
-    width: 290px;
+	height: 50px;
+	width: 290px;
 	position: relative;
 	left: 9px;
 }
-.circle{
+
+.circle {
 	position: relative;
 	width: 274px;
 	height: 40px;
@@ -231,7 +239,8 @@ body {
 	top: 4px;
 	left: 7px;
 }
-.search img{
+
+.search img {
 	position: relative;
 	width: 30px;
 	height: 30px;
@@ -239,18 +248,19 @@ body {
 	left: 80%;
 }
 
-hidd{
-    height:0;
-    weight:0;
+hidd {
+	height: 0;
+	weight: 0;
 }
 
-.ctip::before{
+.ctip::before {
 	content: "秘 ";
 	color: #f00;
 	font-size: 25px;
 	font-weight: bold;
 }
-.ctip1::before{
+
+.ctip1::before {
 	content: " 秘 ";
 	color: #767171;
 	font-size: 25px;

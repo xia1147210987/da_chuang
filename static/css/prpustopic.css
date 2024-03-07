@@ -20,14 +20,15 @@ body {
 .logo{
     position: absolute;
     top:0%;
-    left:3%;
-    height: 180px;
+    left:5%;
+    width: 90%;
+    height: 140px;
 }
 
 .input {
 	background-color: #ffffff;
     /* font-weight: bold; */
-	color: rgb(254, 254, 254);
+	color: rgb(0, 0, 0);
 	border: 2px solid #ffffff;
 	padding: 0.7rem 1rem;
 	width: 1000px;
@@ -83,10 +84,10 @@ body {
 }
 
 .border.msg{
-    width: 180px;
+    width: 170px;
     position: absolute;
-    left: -3%;
-    top:-5%;
+    left: -1%;
+    top: -2%;
 }
 
 #msgframe{
@@ -117,7 +118,7 @@ body {
 .title{
     float: left;
     color: #000;
-    font-size: 60px;
+    font-size: 50px;
     position: relative;
     left: 10px;
     top:10%;

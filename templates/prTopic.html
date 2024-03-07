@@ -17,8 +17,10 @@
     </div>
     <!-- 标题、收藏、分享 -->
     <div class="head">
-         <div class="title"><p>{{ inf.Topic.TTopic }}</p></div>
-<!--        <div class="title"><p>《缄默法则》模组发布</p></div>-->
+        <div class="title">
+            <p>{{ inf.Topic.TTopic }}</p>
+        </div>
+        <!--        <div class="title"><p>《缄默法则》模组发布</p></div>-->
         <div class="store" id="store"></div>
         <div class="share store"></div>
     </div>
@@ -33,7 +35,7 @@
                 </div>
             </div>
         </div>
-<!-- 设置字体宽度随内容改变div{ width:auto; display:inline-block !important; display:inline; } -->
+        <!-- 设置字体宽度随内容改变div{ width:auto; display:inline-block !important; display:inline; } -->
         <div class="topic">
             <div class="topic_top" id="topic">
                 <div class="number"></div>
@@ -43,8 +45,8 @@
         </div>
     </div>
     <form action="{% url 'prgetopic' %}" id="getopic" method="POST" onsubmit="return check()">{% csrf_token %}
-        <input type="hidden" value="{{ inf.uid }}" name="UID" required=""/>
-        <input type="hidden" value="0" name="TID" required="" class="hidd" id="TID"/>
+        <input type="hidden" value="{{ inf.uid }}" name="UID" required="" />
+        <input type="hidden" value="0" name="TID" required="" class="hidd" id="TID" />
     </form>
 </body>
 <script src="/static/js/prTopic.js"></script>
@@ -55,4 +57,5 @@
         form.submit();
     });
 </script>
+
 </html>

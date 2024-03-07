@@ -14,10 +14,9 @@
     <!-- 头部 -->
     <!-- 跳转至 隐私贴界面 或 管理员登录界面 -->
     <div class="top">
-        {% csrf_token %}
         <img src="/static/images/title.png" alt="Babolbabol" class="logo" id="logo">
         <div class="icon" id="enter">管理员入口</div>
-    </div>
+    </div>{% csrf_token %}
     <div class="container">
         <!-- 帖子 -->
         <div class="note">

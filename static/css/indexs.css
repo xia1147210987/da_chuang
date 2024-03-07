@@ -93,6 +93,14 @@ body {
 	z-index: 5;
 }
 
+.titleS {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+
 .container__overlay {
 	height: 100%;
 	left: 50%;

@@ -12,13 +12,13 @@
 </head>
 
 <body>
-    {% csrf_token %}
     <!-- 头部 -->
     <!-- 跳转至 主贴界面 或 管理员登录界面 -->
     <div class="top">
         <img src="/static/images/title.png" alt="Babolbabol" class="logo" id="logo">
         <div class="icon" id="enter">"阅后即焚"部</div>
     </div>
+    {% csrf_token %}
     <div class="container">
         <!-- 帖子 -->
         <div class="note">

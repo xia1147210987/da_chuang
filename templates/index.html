@@ -14,17 +14,18 @@
     <div class="container right-panel-active">
         <!-- 登录 -->
         <div class="container__form container--signup">
-            <form action="{% url 'login' %}" method="post" class="form" id="form1" onsubmit="return loginBtn_click();">{% csrf_token %}
-                <input type="username" name="username" placeholder="用户名" class="input" id="user" required=""/>
+            <form action="{% url 'login' %}" method="post" class="form" id="form1" onsubmit="return loginBtn_click();">
+                <div class="titleS" id="titleS"><img src="/static/images/yhjf.png" style="width: 308px; height: 150px;">
+                </div>{% csrf_token %}
+                <input type="username" name="username" placeholder="用户名" class="input" id="user" required="" />
                 <div class="kuang">
-                    <input type="password" name="password" placeholder="密码" class="input" id='pass' required=""/>
+                    <input type="password" name="password" placeholder="密码" class="input" id='pass' required="" />
                     <div class="conceal" id='conceal'></div>
                 </div>
-                 <input type="submit" class="btn" value="登录" id="sub" name="login">
+                <input type="submit" class="btn" value="登录" id="sub" name="login">
                 <!--<button type="submit" class="btn" id="sub" name="login">登录</button> -->
                 <div class="passwordset">
                     <input type="checkbox" id="remember" checked><span class="rember">记住密码</span>
-                    
                     <a class="link">忘记密码</a>
                 </div>
             </form>
@@ -32,11 +33,11 @@
         <!-- 注册 -->
         <div class="container__form container--signin">
             <form action="{% url 'register' %}" method="POST" class="form" id="form2">{% csrf_token %}
-                <input type="username" name="username" placeholder="用户名" class="input" required=""/>
-                <input type="password" name="password" placeholder="密码" class="input" required=""/>
-                <input type="password" name="password" placeholder="确认密码" class="input" required=""/>
+                <input type="username" name="username" placeholder="用户名" class="input" required="" />
+                <input type="password" name="password" placeholder="密码" class="input" required="" />
+                <input type="password" name="password" placeholder="确认密码" class="input" required="" />
                 <input type="submit" class="btn" value="注册" name="register">
-<!--                <button type="submit" class="btn" name="register">注册</button>-->
+                <!--                <button type="submit" class="btn" name="register">注册</button>-->
             </form>
         </div>
         <!-- 整体 -->
@@ -54,4 +55,5 @@
     <div class="line" id="line"></div>
 </body>
 <script src="/static/js/indexs.js"></script>
+
 </html>
