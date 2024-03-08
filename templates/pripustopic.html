@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Babolbabol</title>
     <link rel="stylesheet" href="/static/css/prpustopic.css">
 </head>
+
 <body>
+    <button href="javascript:history.back()" class="back-button"></button>
     <div>
         <img src="/static/images/title.png" alt="Babolbabol" class="logo" id="logo">
     </div>
@@ -15,15 +18,16 @@
         <form action="{% url 'prpostopic' %}" id="pustopic" method="POST" onsubmit="return check()">{% csrf_token %}
             <div id="recframe">
                 <div class="title">Title</div>
-                <input type="text" placeholder="请输入帖文标题" class="input" id="user" name="TTopic" required=""/>
+                <input type="text" placeholder="请输入帖文标题" class="input" id="user" name="TTopic" required="" />
             </div>
             <div id="msgframe">
                 <div class="back msg"></div>
                 <img src="/static/images/MESSAGE.png" alt="msg" class="border msg">
-                <textarea name="TContent" id="msg" cols="30" rows="10" placeholder="帖内容" form="pustopic" required=""></textarea>
-                <input type="hidden" name="UID" id="uid" value="" required=""/>
+                <textarea name="TContent" id="msg" cols="30" rows="10" placeholder="帖内容" form="pustopic"
+                    required=""></textarea>
+                <input type="hidden" name="UID" id="uid" value="" required="" />
             </div>
-            <input type="text" class="rid" name="rid" placeholder="收帖人id(可空)"/>
+            <input type="text" class="rid" name="rid" placeholder="收帖人id(可空)" />
             <button onclick="formS()" class="btn" id="sub">
         </form>
     </div>
@@ -31,9 +35,10 @@
 <script>
     var idArray = window.location.search.split('=');
     var assetId = idArray[1];
-    function formS(){
+    function formS() {
         document.getElementById("uid").value = assetId;
         document.getElementById("pustopic").submit();
     }
 </script>
+
 </html>

@@ -43,7 +43,7 @@ body {
     left: 12%;
     background-color: #ffffff;
     font-weight: normal;
-    color: #ffffff;
+    color: #000000;
     border: 2px solid #02bbf9;
     padding: 0.9rem 1rem;
     margin: 0.5rem 0;
@@ -83,11 +83,28 @@ body {
     top: 10px;
 }
 
+.back-button {
+    position: absolute;
+    right: 9%;
+    bottom: -3%;
+    background-color: #efefe3d8;
+    width: 180px;
+    height: 56px;
+    color: #1387e0;
+    text-indent: -9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+    background-image: url('/static/images/return.png');
+    border-radius: 12px;
+}
 .border.msg {
     width: 180px;
     position: absolute;
-    left: -3%;
-    top: -5%;
+    left: -1%;
+    top: -2%;
 }
 
 #msgframe {
@@ -102,17 +119,18 @@ body {
 .btn {
     background-color: #00eaff;
     width: 200px;
-    height: 80px;
+    height: 70px;
     text-indent: -9999px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image: url('/static/images/SEND.png');
     position: absolute;
-    right: 9%;
+    left: 10%;
     bottom: -3%;
     cursor: pointer;
     border: none;
+    border-radius: 12px;
 }
 
 .title {

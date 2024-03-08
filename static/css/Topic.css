@@ -89,6 +89,24 @@ body {
 	height: auto;
 }
 
+.back-button {
+    position: absolute;
+    right: 9%;
+    bottom: -3%;
+    background-color: #efefe3d8;
+    width: 190px;
+    height: 60px;
+    color: #1387e0;
+    text-indent: -9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+    background-image: url('/static/images/return.png');
+    border-radius: 12px;
+}
+
 .personal_details {
 	height: 200px;
 	width: 300px;

@@ -15,7 +15,7 @@
         <!-- 登录 -->
         <div class="container__form container--signup">
             <form action="{% url 'login' %}" method="post" class="form" id="form1" onsubmit="return loginBtn_click();">
-                <div class="titleS" id="titleS"><img src="/static/images/yhjf.png" style="width: 308px; height: 150px;">
+                <div class="titleS" id="titleS"><img src="/static/images/yhjf.png" style="width: 350px; height: 200px;">
                 </div>{% csrf_token %}
                 <input type="username" name="username" placeholder="用户名" class="input" id="user" required="" />
                 <div class="kuang">

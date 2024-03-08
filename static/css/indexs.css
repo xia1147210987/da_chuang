@@ -51,7 +51,7 @@ body {
 }
 
 .container {
-	background-color: #1387e0;
+	background-color: #4285F4;
 	border-radius: var(--button-radius);
 	height: var(--max-height);
 	max-width: var(--max-width);
@@ -94,11 +94,12 @@ body {
 }
 
 .titleS {
-	display: flex;
+	position: absolute;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	
+	top: -5%;
+	right: 20%;
 }
 
 .container__overlay {
@@ -182,7 +183,7 @@ body {
 }
 
 .form {
-	background-color: #00bdfc;
+	background-color: rgb(87,190,255);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -232,7 +233,7 @@ body {
 }
 
 #signIn{
-    background-image: url('/static/images/login.png');
+    background-image: url('/static/images/loginef.png');
     background-repeat: no-repeat;
 	height: 230px;
 	width: 100%;
