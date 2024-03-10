@@ -251,7 +251,6 @@ body {
 
 .hidd {
 	height: 0;
-	weight: 0;
 }
 
 .ctip::before {

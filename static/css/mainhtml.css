@@ -118,14 +118,14 @@ body {
 
 .contents--black div{
 	font-size: 19px;
-	color: #fff;
+	color: #ffffff;
 	position: relative;
 	float: left;
 	height: 50px;
 }
 .contents--brown div{
 	font-size: 19px;
-	color:#fff;
+	color:#ffffff;
 	position: relative;
 	float: left;
 	height: 50px;
@@ -235,5 +235,4 @@ body {
 
 .hidd{
     height:0;
-    weight:0;
 }

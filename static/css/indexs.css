@@ -2,7 +2,7 @@
 	/* COLORS */
 	--bold: #c9bca0;
 	--blue: #91BF88;
-	--lightblue: #FFFFFF;
+	--lightblue: rgb(255, 255, 255);
 	/* RADII */
 	--button-radius: 0.7rem;
 	/* SIZES */
@@ -227,7 +227,7 @@ body {
 .btn {
 	background-color: var(--blue);
 	border: 1px solid var(--blue);
-	color: #fff;
+	color: #ffffff;
 	cursor: pointer;
 	font-size: 1rem;
 	letter-spacing: 1rem;
