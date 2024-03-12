@@ -1,6 +1,6 @@
 import subprocess
 import webbrowser
-import mysql.connector
+
 import importlib.util
 
 # 要执行的命令列表
@@ -39,9 +39,17 @@ except ImportError:
 try:
     import mysql.connector
 except ImportError:
-    print("mysql-connector-python not found. Installing mysql-connector-python...")
-    subprocess.run(["pip", "install", "mysql-connector-python"])
-    print("mysql-connector-python installed successfully!")
+    import subprocess
+    import sys
+
+    print("mysql.connector package not found. Attempting to install...")
+
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "mysql-connector-python"])
+        print("mysql.connector package installed successfully.")
+    except subprocess.CalledProcessError:
+        print("Failed to install mysql.connector package. Please install it manually using 'pip install mysql-connector-python'.")
+
 
 
 # 连接到 MySQL 服务器
