@@ -1,6 +1,6 @@
 import subprocess
 import webbrowser
-import mysql.connector
+
 import importlib.util
 
 # 要执行的命令列表
@@ -22,6 +22,7 @@ except ImportError:
     print("Django not found. Installing Django...")
     subprocess.run(["pip", "install", "django==2.1.4"])
     print("Django installed successfully!")
+    import django
 
 # 检查并安装 OS 库 (Python 标准库中的一部分，无需额外安装)
 
@@ -32,6 +33,7 @@ except ImportError:
     print("pymysql not found. Installing pymysql...")
     subprocess.run(["pip", "install", "pymysql"])
     print("pymysql installed successfully!")
+    import pymysql
 
 # 检查并安装 json 库 (Python 标准库中的一部分，无需额外安装)
 
@@ -39,9 +41,19 @@ except ImportError:
 try:
     import mysql.connector
 except ImportError:
-    print("mysql-connector-python not found. Installing mysql-connector-python...")
-    subprocess.run(["pip", "install", "mysql-connector-python"])
-    print("mysql-connector-python installed successfully!")
+    import subprocess
+    import sys
+
+    print("mysql.connector package not found. Attempting to install...")
+
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "mysql-connector-python"])
+        print("mysql.connector package installed successfully.")
+        import mysql.connector
+        print("mysql.connector package imported successfully.")
+    except subprocess.CalledProcessError:
+        print("Failed to install mysql.connector package. Please install it manually using 'pip install mysql-connector-python'.")
+
 
 
 # 连接到 MySQL 服务器
